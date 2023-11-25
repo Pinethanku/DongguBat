@@ -1,30 +1,167 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
-import 'package:flutter_test/flutter_test.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-import 'package:donggu_bat/main.dart';
+class YourWidget extends StatefulWidget {
+  @override
+  _YourWidgetState createState() => _YourWidgetState();
+}
 
-void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    // await tester.pumpWidget(const MyApp());
+class _YourWidgetState extends State<YourWidget> {
+  final TextEditingController _textControl1 = TextEditingController();
+  final TextEditingController _textControl2 = TextEditingController();
+  final TextEditingController _textControl3 = TextEditingController();
+  final TextEditingController _textControl4 = TextEditingController();
+  final TextEditingController _textControl5 = TextEditingController();
+  final TextEditingController _textControl6 = TextEditingController();
+  final TextEditingController _textControl7 = TextEditingController();
+  final TextEditingController _textControl8 = TextEditingController();
+  final TextEditingController _textControl9 = TextEditingController();
+  
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        TextFormField(
+          controller: _textControl1,
+          decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            contentPadding: EdgeInsets.fromLTRB(15, 5, 5, 15),
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+                color: Color.fromARGB(100, 0, 0, 0),
+                width: 1,
+              ),
+              //borderRadius: BorderRadius.circular(12),
+            ),
+          ),
+          keyboardType: TextInputType.text,
+        ),
+        TextFormField(
+          controller: _textControl2,
+          decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            contentPadding: EdgeInsets.fromLTRB(15, 5, 5, 15),
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+                color: Color.fromARGB(100, 0, 0, 0),
+                width: 1,
+              ),
+              //borderRadius: BorderRadius.circular(12),
+            ),
+          ),
+          keyboardType: TextInputType.text,
+        ),
+        TextFormField(
+          controller: _textControl3,
+          decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            contentPadding: EdgeInsets.fromLTRB(15, 5, 5, 15),
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+                color: Color.fromARGB(100, 0, 0, 0),
+                width: 1,
+              ),
+              //borderRadius: BorderRadius.circular(12),
+            ),
+          ),
+          keyboardType: TextInputType.text,
+        ),
+        TextFormField(
+          controller: _textControl4,
+          decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            contentPadding: EdgeInsets.fromLTRB(15, 5, 5, 15),
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+                color: Color.fromARGB(100, 0, 0, 0),
+                width: 1,
+              ),
+              //borderRadius: BorderRadius.circular(12),
+            ),
+          ),
+          keyboardType: TextInputType.text,
+        ),
+        TextFormField(
+          controller: _textControl5,
+          decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            contentPadding: EdgeInsets.fromLTRB(15, 5, 5, 15),
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+                color: Color.fromARGB(100, 0, 0, 0),
+                width: 1,
+              ),
+              //borderRadius: BorderRadius.circular(12),
+            ),
+          ),
+          keyboardType: TextInputType.text,
+        ),
+        TextFormField(
+          controller: _textControl6,
+          decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            contentPadding: EdgeInsets.fromLTRB(15, 5, 5, 15),
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+                color: Color.fromARGB(100, 0, 0, 0),
+                width: 1,
+              ),
+              //borderRadius: BorderRadius.circular(12),
+            ),
+          ),
+          keyboardType: TextInputType.text,
+        ),
+        TextFormField(
+          controller: _textControl7,
+          decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            contentPadding: EdgeInsets.fromLTRB(15, 5, 5, 15),
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+                color: Color.fromARGB(100, 0, 0, 0),
+                width: 1,
+              ),
+              //borderRadius: BorderRadius.circular(12),
+            ),
+          ),
+          keyboardType: TextInputType.text,
+        ),
+        TextFormField(
+          controller: _textControl8,
+          decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            contentPadding: EdgeInsets.fromLTRB(15, 5, 5, 15),
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+                color: Color.fromARGB(100, 0, 0, 0),
+                width: 1,
+              ),
+              //borderRadius: BorderRadius.circular(12),
+            ),
+          ),
+          keyboardType: TextInputType.text,
+        ),
+        TextFormField(
+          controller: _textControl9,
+          decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            contentPadding: EdgeInsets.fromLTRB(15, 5, 5, 15),
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+                color: Color.fromARGB(100, 0, 0, 0),
+                width: 1,
+              ),
+              //borderRadius: BorderRadius.circular(12),
+            ),
+          ),
+          keyboardType: TextInputType.text,
+        ),
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
-
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
-  });
+        ElevatedButton(
+          onPressed: () {},
+          child: Text("클릭"),
+        )
+      ],
+    );
+  }
 }
